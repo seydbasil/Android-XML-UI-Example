@@ -1,0 +1,74 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_sample">
+
+    <com.example.user.uiexample.BlurLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tvContinue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_bg_rounded_border_light"
+            android:drawableEnd="@drawable/ic_continue"
+            android:gravity="center"
+            app:layout_constraintVertical_chainStyle="packed"
+            android:padding="10dp"
+            android:text="CONTINUE"
+            android:textColor="#FFFFFF"
+            app:layout_constraintBottom_toTopOf="@id/tvCancel"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvCancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/shape_bg_rounded_border_light"
+            android:drawableEnd="@drawable/ic_continue"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="CANCEL"
+            android:textColor="#FFFFFF"
+            app:layout_constraintBottom_toTopOf="@+id/rlOk"
+            app:layout_constraintTop_toBottomOf="@+id/tvContinue" />
+
+        <com.beegains.heartofvolley.widgets.RoundedRelativeLayout
+            android:id="@+id/rlOk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvCancel"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <com.example.user.uiexample.BlurLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tvOk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_bg_rounded_border_light"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:paddingEnd="50dp"
+                    android:paddingStart="50dp"
+                    android:text="OK"
+                    android:textColor="#FFFFFF" />
+            </com.example.user.uiexample.BlurLayout>
+        </com.beegains.heartofvolley.widgets.RoundedRelativeLayout>
+
+    </com.example.user.uiexample.BlurLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
